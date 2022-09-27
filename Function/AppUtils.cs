@@ -108,7 +108,7 @@ namespace MyUtils.Function
             Type type = typeof(T);
             foreach (DataRow dr in dt.Rows)
             {
-                object entity = Activator.CreateInstance(type);
+                object entity = Activator.CreateInstance(type); 
                 foreach (PropertyInfo info in type.GetProperties())
                 {
                     string name = info.Name.ToUpper();
