@@ -1,4 +1,5 @@
-﻿using MyUtils.Forms;
+﻿using MyUtils.Case;
+using MyUtils.Forms;
 using MyUtils.Function;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace MyUtils
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            new DelegateDemo();
             Application.Run(new test1());
           
         }

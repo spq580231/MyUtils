@@ -73,6 +73,55 @@ namespace MyUtils.Function
         {
             return JArray.Parse(ReadJsonStr(path));
         }
+
+        /// <summary>
+        /// DataTable赋值给单个实体类
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static T DtToEntity<T>(DataTable dt)
+        {
+            if (dt == null && dt.Rows.Count < 1) return default(T);
+            Type type = typeof(T);
+            object entity = Activator.CreateInstance(type);
+            foreach (PropertyInfo info in type.GetProperties())
+            {
+                string name = info.Name.ToUpper();
+                if (dt.Columns.Contains(name))
+                {
+                    info.SetValue(entity, Convert.ChangeType(dt.Rows[0][name], info.PropertyType), null);
+                }
+            }
+            return (T)entity;
+        }
+        /// <summary>
+        /// DataTable赋值给多个实体类
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static List<T> DtToListEntity<T>(DataTable dt)
+        {
+            if (dt == null) return null;
+            List<T> list = new List<T>();
+            Type type = typeof(T);
+            foreach (DataRow dr in dt.Rows)
+            {
+                object entity = Activator.CreateInstance(type);
+                foreach (PropertyInfo info in type.GetProperties())
+                {
+                    string name = info.Name.ToUpper();
+                    if (dt.Columns.Contains(name))
+                    {
+                        info.SetValue(entity, Convert.ChangeType(dr[name], info.PropertyType), null);
+                    }
+                }
+                list.Add((T)entity);
+            }
+            return list;
+        }
+
         /// dataTable转换成Json格式字符串     
         ///	</summary>     
         ///	<param name="dt"/>
