@@ -15,22 +15,22 @@ namespace MyUtils.Case
         public DelegateDemo()
         {
             degTest1 degTest1 = func1;
-            degTest1("func1");
+            degTest1("888");
 
             Action action1 = func2;
             action1();
 
             Action<string> action2 = func1;
-            action2("func1");
+            action2("999");
 
             Action<string, int> action3 = func3;
-            action3("func3", 2);
+            action3("test", 2);
 
             Func<string> fun1 = func4;
             fun1();
 
             Func<string, string> fun2 = func5;
-            fun2("func5");
+            fun2("88");
 
 
 
@@ -45,32 +45,13 @@ namespace MyUtils.Case
 
             Students students = new Students();
             Students[] arrStud = students.GetStudents().ToArray();
-            //Sort(arrStud, ageCompare);
-            // Sort(arrStud,(s1,s2)=> { return s1.Age < s2.Age; });
-            Sort(arrStud, (s1, s2) => s1.Age < s2.Age);
+            Sort(arrStud, ageCompare);
             for (int i = 0; i < arrStud.Length; i++)
             {
                 arrStud[i].toString();
             }
-            
-
-
-            Console.WriteLine("---------------------");
-            int ren =  sub(3,7);
-            Console.WriteLine(ren);
         }
 
-        Func<int, int, int> sub = (a, b) =>
-        {
-            if (a > b)
-            {
-                return a + b;
-            }
-            else
-            {
-                return a - b;
-            }
-        };
         private bool ageCompare(Students s1, Students s2)
         {
             return s1.Age > s2.Age;
