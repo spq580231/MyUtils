@@ -1,5 +1,7 @@
-﻿using System;
+﻿#define IsWriteLogs
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -19,7 +21,11 @@ namespace MyUtils.Function
             if (!Directory.Exists(FileName))
                 Directory.CreateDirectory(FileName);
         }
-
+        [Conditional("IsWriteLogs")]
+        public static void WriteInfoLogs(string a,string b)
+        {
+            Info(a,b);
+        }
         /// <summary>
         /// 写日志
         /// </summary>

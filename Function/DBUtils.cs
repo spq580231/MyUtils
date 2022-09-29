@@ -5,6 +5,9 @@ using System.Windows.Forms;
 
 namespace MyUtils.Function
 {
+    /// <summary>
+    /// oracle工具类
+    /// </summary>
     public static class DBUtils
     {
         public static string Host = "192.168.0.40";

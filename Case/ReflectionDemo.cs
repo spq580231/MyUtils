@@ -5,8 +5,12 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MyUtils.Case
 {
+    /// <summary>
+    /// 反射
+    /// </summary>
     public class ReflectionDemo
     {
         public ReflectionDemo()
@@ -26,7 +30,7 @@ namespace MyUtils.Case
             PropertyInfo[] propertyInfos = type.GetProperties();
             foreach (PropertyInfo item in propertyInfos)
             {
-                Console.WriteLine(item.Name);
+               Console.WriteLine(item.Name);
             }
             Console.WriteLine("-----------------------");
             MethodInfo[] methodInfo = type.GetMethods();

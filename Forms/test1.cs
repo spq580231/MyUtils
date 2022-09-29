@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MyUtils.Case;
+using System;
 using System.Windows.Forms;
 
 namespace MyUtils.Forms
 {
+    [MyAttribute("spq","1.0","测试自定义特性类")]
     public partial class test1 : Form
     {
         delegate void degTest1(string str);

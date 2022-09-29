@@ -6,6 +6,12 @@ namespace MyUtils.Case
 {
     public delegate bool StudentsDel(Students str);
     public delegate void delTest1(string str);
+
+    /// <summary>
+    /// 委托
+    /// </summary>
+    /// <param name="str"></param>
+    /// <returns></returns>
     public class DelegateDemo
     {
         public event delTest1 MyDelEveTest;
