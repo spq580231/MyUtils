@@ -1,13 +1,4 @@
-﻿using MyUtils.Case;
-using MyUtils.Function;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace MyUtils.Forms
@@ -22,7 +13,7 @@ namespace MyUtils.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            degTest1 degTest1 = func1;
+            degTest1 degTest1 = func1; 
             degTest1("888");
 
             Action action1 = func2;

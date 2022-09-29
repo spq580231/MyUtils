@@ -1,10 +1,6 @@
 ﻿using MyUtils.Entity;
-using Org.BouncyCastle.Utilities.Encoders;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyUtils.Case
 {
@@ -45,11 +41,15 @@ namespace MyUtils.Case
 
             Students students = new Students();
             Students[] arrStud = students.GetStudents().ToArray();
-            Sort(arrStud, ageCompare);
+            // Sort(arrStud, ageCompare);
+            //Sort(arrStud,delegate (Students s1,Students s2) {return s1.Age > s2.Age; });
+            Sort(arrStud, (s1, s2) => s1.Age > s2.Age);
             for (int i = 0; i < arrStud.Length; i++)
             {
                 arrStud[i].toString();
             }
+
+
         }
 
         private bool ageCompare(Students s1, Students s2)

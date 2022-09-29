@@ -1,11 +1,6 @@
 ﻿using MyUtils.Case;
 using MyUtils.Forms;
-using MyUtils.Function;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyUtils
@@ -20,6 +15,7 @@ namespace MyUtils
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Function.DBUtils.GetSqlData("select * from brxx where id= 1009029");
             new DelegateDemo();
             Application.Run(new test1());
           
