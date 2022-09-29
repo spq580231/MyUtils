@@ -4,13 +4,15 @@ using System.Collections.Generic;
 
 namespace MyUtils.Case
 {
-    public delegate bool MyDel(Students str);
-    public delegate void degTest1(string str);
+    public delegate bool StudentsDel(Students str);
+    public delegate void delTest1(string str);
     public class DelegateDemo
     {
+        public event delTest1 MyDelEveTest;
+        public delTest1 MyDelTest;
         public DelegateDemo()
         {
-            degTest1 degTest1 = func1;
+            delTest1 degTest1 = func1;
             degTest1("888");
 
             Action action1 = func2;
@@ -106,7 +108,7 @@ namespace MyUtils.Case
         {
             return s.Sex == "女";
         }
-        public List<Students> Filter(List<Students> students, MyDel myDel)
+        public List<Students> Filter(List<Students> students, StudentsDel myDel)
         {
             List<Students> StudentsList = new List<Students>();
             foreach (var item in students)

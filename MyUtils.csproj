@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Case\DelegateDemo.cs" />
+    <Compile Include="Case\ReflectionDemo.cs" />
     <Compile Include="Entity\brxx.cs" />
     <Compile Include="Entity\data.cs" />
     <Compile Include="Entity\setlinfo.cs" />

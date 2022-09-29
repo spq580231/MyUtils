@@ -4,6 +4,7 @@ namespace MyUtils.Entity
 {
     public  class brxx
     {
+        public string age;
         [Description("ID")]
         public string id { get; set; }
         [Description("姓名")]
@@ -19,5 +20,7 @@ namespace MyUtils.Entity
         {
             return "{id=" + id + ",xm=" + xm + ",xb=" + xb + ",nl=" + nl+"}";
         }
+        public void test1()
+        { }
     }
 }

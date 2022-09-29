@@ -15,8 +15,9 @@ namespace MyUtils
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            new DelegateDemo();
-            Application.Run(new test1());
+            //new DelegateDemo();
+            new ReflectionDemo();
+            Application.Run();
           
         }
    

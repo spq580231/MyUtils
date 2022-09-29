@@ -30,6 +30,11 @@ namespace MyUtils.Forms
 
             Func<string,string> fun2 = func5;
             fun2("88");
+
+            Case.DelegateDemo delegateDemo = new Case.DelegateDemo();
+            delegateDemo.MyDelTest = func1;
+            delegateDemo.MyDelEveTest += func1;
+
         }
 
         private void func1(string str)
