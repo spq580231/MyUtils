@@ -15,6 +15,7 @@ namespace MyUtils
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Function.DBUtils.GetSqlData("select * from brxx where id= 1009029");
             new DelegateDemo();
             Application.Run(new test1());
           
