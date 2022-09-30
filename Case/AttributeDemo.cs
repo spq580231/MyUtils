@@ -34,7 +34,7 @@ namespace MyUtils.Case
         [Conditional("IsShowLogs")]
         public static void ShowLogs(string log)
         {
-            Console.WriteLine(log);
+            Console.WriteLine(log); 
         }
 
         /// <summary>
