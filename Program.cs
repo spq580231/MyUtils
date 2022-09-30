@@ -18,7 +18,6 @@ namespace MyUtils
             //new DelegateDemo();
             //new ReflectionDemo();
             //new AttributeDemo();
-            Console.WriteLine();
             Application.Run();
           
         }
