@@ -17,7 +17,7 @@ namespace MyUtils
             Application.SetCompatibleTextRenderingDefault(false);
             //new DelegateDemo();
             //new ReflectionDemo();
-            new AttributeDemo();
+            //new AttributeDemo();
             Application.Run();
           
         }
